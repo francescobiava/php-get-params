@@ -9,21 +9,32 @@
   <?php
     
     $password = $_GET['password'];
-    if ($password === 'boolean') {
-      $message = '<h1 style="color:green"> Accesso riuscito </h1>';
-    } else {
-      $message = '<h1 style="color:red"> Accesso negato </h1>';
-    }
+    // // VERSION 1
+    // if ($password === 'boolean') {
+    //   $message = '<h1 style="color:green"> Accesso riuscito </h1>';
+    // } else {
+    //   $message = '<h1 style="color:red"> Accesso negato </h1>';
+    // }
 
   ?>
 
 </head>
 <body>
 
-<?php 
+<?php
+// echo $message; // VERSION 1
+?>
 
-echo $message;
-
+<?php
+if ($password === 'boolean') {
+  ?>
+    <h1 style="color:green">Accesso riuscito</h1>
+  <?php
+} else {
+  ?>
+    <h1 style="color:red">Accesso negato</h1>
+  <?php
+}
 ?>
 
 </body>
